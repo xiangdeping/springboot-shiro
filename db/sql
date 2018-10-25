@@ -1,0 +1,22 @@
+
+CREATE TABLE `role` (
+  `id` int(11) NOT NULL auto_increment,
+  `role` varchar(20) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+insert  into `role`(`id`,`role`) values 
+(1,'user'),
+(2,'admin');
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL auto_increment,
+  `username` varchar(20) default NULL,
+  `password` varchar(20) default NULL,
+  `role` varchar(20) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+insert  into `user`(`id`,`username`,`password`,`role`) values 
+(1,'howit','123456','user'),
+(2,'swit','123456789','admin');
